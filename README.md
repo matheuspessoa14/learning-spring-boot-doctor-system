@@ -1,46 +1,107 @@
-## ANOTATIONS - ANOTAÇÕES
-1. Anotações do Spring Web
-`@RequestMapping("/medicos")`
-=> Define que a classe está mapeada para a url[endpoint] /medicos.
+# 📘 Projeto Web I
 
-`@RestController`
-=> Define que a classe é uma classe controladora no Spring.
+Este repositório contém o desenvolvimento do meu projeto da disciplina de Programação Web I, no curso de Análise e Desenvolvimento de Sistemas (ADS). O projeto está sendo desenvolvido de forma incremental ao longo das aulas, acompanhando os conteúdos apresentados em sala.
 
-`@GetMapping` 
-=> Define que o método será somente leitura.
+---
 
-`@PostMapping`
-=> Define que o método irá receber dados.
+## 🚀 Objetivo
 
-`@PutMapping`
-=> Atualiza alguma informação.
+Construir uma aplicação web aplicando os conceitos aprendidos em sala de aula, utilizando o framework Spring Boot.
 
-`@DeleteMapping`
-=> Deleta dados.
+---
 
-`@ResquestBody`
-=> é utilizada quando você irá receber dados pelo simulador de requisição [insomnia], e informa que os dados serão enviados no corpo da requisição.
+## 🛠️ Tecnologias
 
-`@Autowired`
-=> é utilizado quando você está aplicando a injeção de depêndencia. Ou seja, o Springboot sabe o que a classe(interface) possui de métodos e atributos.
+- Java
+- Spring Boot
+- Thymeleaf
+- HTML
+- CSS
 
-`@Transactional`
-=> é utilizado para que o método consiga realizar algum tipo de modelagem(alteração) no BD.
+---
 
-## RELACIONAMENTO ENTRE TABELAS NO SPRINGBOOT
+## 📌 Status
 
-`@OneToOne` -> Um para um. (Uma consulta está ligada a um único médico).
-`@OneToMany` -> Um para muitos. (Uma médico tem várias consultas).
-`@MantToOne` -> Muitos para um. (Muitas consultas para um paciente).
-`@ManyToMany` -> Muitos para muitos. (Muitos pacientes para muitos médicos).
+🚧 Em desenvolvimento
 
-`Chave Primária (PK)` -> é o atributo(campo) que identifica a tabela(objeto) no BD.
-`Chave Estrangeira (FK)` -> é o atributo PK que está mencionado em outra tabela, que por sua vez será uma chave estrangeira no BD.
+---
 
-OBS:
-1. Sempre defina o lado "dono" da `relação(@JoinColumn)` no lado que tem a `FK(chave estrangeira)`
+## 📚 Conteúdo de Estudo - Spring Web
 
+Este projeto também serve como base para anotações e prática dos principais conceitos do Spring Boot utilizados durante o desenvolvimento.
 
-Autor: Matheus Pessoa
-Disciplina: Programação Web I - ADS 4 Módulo
-Professor: José Willian 
+---
+
+### 1. Anotações do Spring Web
+
+`@RequestMapping("/medicos")`  
+Define o endpoint base da classe (ex: `/medicos`).
+
+`@RestController`  
+Indica que a classe é um controller REST (combina `@Controller` + `@ResponseBody`).
+
+`@GetMapping`  
+Define que o método responde a requisições HTTP GET (leitura de dados).
+
+`@PostMapping`  
+Define que o método recebe dados via HTTP POST (criação).
+
+`@PutMapping`  
+Usado para atualização de dados via HTTP PUT.
+
+`@DeleteMapping`  
+Usado para remoção de dados via HTTP DELETE.
+
+`@RequestBody`  
+Indica que os dados serão recebidos no corpo da requisição (JSON via Insomnia/Postman).
+
+`@Autowired`  
+Usado para injeção de dependência. O Spring gerencia e fornece automaticamente a instância da classe.
+
+`@Transactional`  
+Garante que uma operação no banco de dados seja executada como uma transação (commit ou rollback automático).
+
+---
+
+### 2. Relacionamento entre tabelas no Spring Boot
+
+`@OneToOne`  
+Um para um (ex: uma consulta está ligada a um único médico).
+
+`@OneToMany`  
+Um para muitos (ex: um médico possui várias consultas).
+
+`@ManyToOne`  
+Muitos para um (ex: várias consultas pertencem a um paciente ou médico).
+
+`@ManyToMany`  
+Muitos para muitos (ex: muitos pacientes podem se relacionar com muitos médicos).
+
+---
+
+### 3. Conceitos de Banco de Dados
+
+**Chave Primária (PK)**  
+Identifica de forma única um registro em uma tabela.
+
+**Chave Estrangeira (FK)**  
+Campo que referencia a chave primária de outra tabela, criando um relacionamento.
+
+---
+
+### ⚠️ Observação
+
+- O lado "dono" da relação geralmente é definido com `@JoinColumn`, ou seja, o lado que contém a chave estrangeira (FK).
+
+---
+
+## 👨‍💻 Autor
+
+Matheus Pessoa Telles  
+4º Período de Análise e Desenvolvimento de Sistemas (ADS)
+
+---
+
+## 📄 Licença
+
+Este projeto foi desenvolvido para fins acadêmicos e educacionais.
