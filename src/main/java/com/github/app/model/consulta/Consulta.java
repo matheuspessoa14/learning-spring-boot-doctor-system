@@ -36,5 +36,12 @@ public class Consulta {
 
     private LocalDateTime data;
 
+    public Consulta(DadosAgendamentoConsulta dados){
+        // this.medico = new Medico(dados.medicoId());
+        // this.paciente = new Paciente(dados.pacienteId());
+        this.data = dados.data();
+        this.status = Status.AGENDADA;
+    }
+
 
 }
